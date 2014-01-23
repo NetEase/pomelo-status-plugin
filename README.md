@@ -61,3 +61,13 @@ app.use(status, {status: {
 }});
 
 ```
+in >=0.0.3 version add cleanOnStartUp option, when you enable this option, status plugin would clean up the old data with the given prefix string.
+
+```
+app.use(status, {status: {
+  host: '127.0.0.1',
+  port: 6379,
+  cleanOnStartUp: true
+}});
+
+```
