@@ -35,6 +35,24 @@ get frontend server id by user id
 + err - error
 + list - array of frontend server ids
 
+###getStatusByUid(uid, cb)
+####Arguments
++ uid - user id
++ cb - callback function
+
+####Return
++ err - error
++ status - boolean, true if user is online (at least one session with a frontend) or false otherwise
+
+###getStatusByUids(uids, cb)
+####Arguments
++ uids - array of user ids
++ cb - callback function
+
+####Return
++ err - error
++ statuses - object with uid as keys and boolean as value, true if user is online (at least one session with a frontend) or false otherwise
+
 ###pushByUids(uids, route, msg, cb)
 ####Arguments
 + uids - array of user ids
