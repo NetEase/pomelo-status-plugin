@@ -18,7 +18,8 @@ var status = require('pomelo-status-plugin');
 
 app.use(status, {status: {
   host: '127.0.0.1',
-  port: 6379
+  port: 6379,
+  db: 1,
 }});
 
 ```
@@ -75,6 +76,7 @@ var mysqlStatusManager = require('./mysqlStatusManager');
 app.use(status, {status: {
   host: '127.0.0.1',
   port: 6379,
+  db: 1,
   channelManager: mysqlStatusManager
 }});
 
@@ -85,6 +87,7 @@ in >=0.0.3 version add cleanOnStartUp option, when you enable this option, statu
 app.use(status, {status: {
   host: '127.0.0.1',
   port: 6379,
+  db: 1,
   cleanOnStartUp: true
 }});
 
